@@ -6,8 +6,8 @@
 // export const IMG_URL = `http://${API_HOST}/storage/`;
 // export const FILE_URL = `http://${API_HOST}/storage/`;
 
-export const API_HOST = "api.humoyundjan.uz";
-export const WS_HOST = "api.humoyundjan.uz";
+export const API_HOST = "api.umirov.uz";
+export const WS_HOST = "api.umirov.uz";
 export const API_URL = `https://${API_HOST}/`;
 export const IMG_URL = `https://${API_HOST}/storage/`;
 export const FILE_URL = `https://${API_HOST}/storage/`;

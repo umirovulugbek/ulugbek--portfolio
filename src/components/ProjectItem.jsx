@@ -73,20 +73,20 @@ const ProjectItem = () => {
       <motion.div className="section-project">
         <div className="cards">
           {project?.map(
-            ({ name, main_image, main_description, tech, link }) => (
+            ({ project_name, project_img, project_description, tech_stack, project_link }) => (
               <>
                 <div className="card">
                   <div className="card-img">
-                    <img src={main_image} alt={name} />
+                    <img src={project_img} alt={project_name} />
                   </div>
                   <div className="card-text">
-                    <h4>{name}</h4>
-                    <p>{main_description}</p>
+                    <h4>{project_name}</h4>
+                    <p>{project_description}</p>
                     <span className="stack">
-                      Tech stack :<p>{tech}</p>
+                      Tech stack : <p>{tech_stack}</p>
                     </span>
                     <div className="links">
-                      <Link className="link" to={link}>
+                      <Link className="link" to={project_link}>
                         <LinkLive />
                         <span>Live Preview</span>
                       </Link>

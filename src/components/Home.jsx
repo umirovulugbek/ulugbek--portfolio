@@ -70,7 +70,7 @@ function Home() {
   const dispatch = useDispatch();
 
   const [data, setData] = useState({});
-  const [replay] = useState(true);
+  // const [replay] = useState(true);
   const { theme } = useSelector((state) => state.main);
   const { scrollYProgress } = useScroll();
 
@@ -94,15 +94,15 @@ function Home() {
       });
   };
 
-  const placeholderText = [{ type: "span", text: "Humoyun Elmurodov" }];
+  const placeholderText = [{ type: "span", text: "Umirov Ulugbek" }];
 
-  const container = {
-    visible: {
-      transition: {
-        staggerChildren: 0.025,
-      },
-    },
-  };
+  // const container = {
+  //   visible: {
+  //     transition: {
+  //       staggerChildren: 0.025,
+  //     },
+  //   },
+  // };
 
   const setMainLoading = (l = false) => {
     dispatch({ type: "SET_LOADING", payload: l });
@@ -177,10 +177,10 @@ function Home() {
             <Container>
               <div className="home-section">
                 <div className="home-section-title">
-                  <motion.h1
-                    animate={replay ? "visible" : "hidden"}
-                    initial="hidden"
-                    variants={container}
+                  <h1
+                    // animate={replay ? "visible" : "hidden"}
+                    // initial="hidden"
+                    // variants={container}
                   >
                     Hi 👋,
                     <br />
@@ -188,7 +188,7 @@ function Home() {
                     {placeholderText.map((item, index) => {
                       return <AnimatedText {...item} key={index} />;
                     })}
-                  </motion.h1>
+                  </h1>
 
                   <Link
                     target="_blank"
