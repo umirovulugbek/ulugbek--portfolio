@@ -216,6 +216,7 @@ export const Container = styled.div`
       gap: 2rem;
       justify-content: center;
       justify-items: center;
+      align-items: center;
       & .hover {
         transform: scale(1.2);
         -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
@@ -228,8 +229,8 @@ export const Container = styled.div`
       }
       & img {
         transition: all 0.5s ease-in-out;
-        width: 120px;
-        height: 120px;
+        max-width: 120px;
+        max-height: 120px;
         cursor: pointer;
         /* -webkit-filter: grayscale(100%); */
         /* Safari 6.0 - 9.0 */

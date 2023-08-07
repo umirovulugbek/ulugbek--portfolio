@@ -14,5 +14,4 @@ export const darkTheme = {
  colorcard: "#CCCCCC",
  colorcardh4: "#CCCCCC",
  cardbackground: "#363636",
- 
 };
