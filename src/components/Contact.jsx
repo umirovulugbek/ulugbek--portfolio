@@ -78,10 +78,10 @@ const Contact = () => {
           <p className="p">{data?.email}</p>
           <div className="bottom-link">
             <div className="navbar-right">
-              <h2 className="logo">Humoyun</h2>
+              <h2 className="logo">Umirov</h2>
               <ul>
                 <li>
-                  <Link to={"tel:+998909934887"}>+998 90 993 48 87</Link>
+                  <Link to={"tel:+998909934887"}>+998 93 664 56 64</Link>
                 </li>
                 <li>{data?.email}</li>
               </ul>

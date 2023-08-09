@@ -76,7 +76,7 @@ function Home() {
 
   useEffect(() => {
     getUser();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getUser = () => {
@@ -178,9 +178,9 @@ function Home() {
               <div className="home-section">
                 <div className="home-section-title">
                   <h1
-                    // animate={replay ? "visible" : "hidden"}
-                    // initial="hidden"
-                    // variants={container}
+                  // animate={replay ? "visible" : "hidden"}
+                  // initial="hidden"
+                  // variants={container}
                   >
                     Hi 👋,
                     <br />
@@ -196,7 +196,7 @@ function Home() {
                     className="download"
                     download
                   >
-                    <div className="button" data-tooltip="Size: 20Mb">
+                    <div className="button" data-tooltip={`Size: ${data?.social?.file_size}Mb`}>
                       <div className="button-wrapper">
                         <div className="text">Download</div>
                         <span className="icon">
@@ -233,12 +233,7 @@ function Home() {
                 </motion.div>
               </div>
             </Container>
-            <SectionScroll>
-              <section>
-                <ParallaxText baseVelocity={-5}>Laravel PHP  MySQL  API </ParallaxText>
-                <ParallaxText baseVelocity={5}>Scroll velocity</ParallaxText>
-              </section>
-            </SectionScroll>
+
             <Container>
               <div className="section-stack">
                 <h2>My Tech Stack</h2>
@@ -250,12 +245,20 @@ function Home() {
                 <p style={{ textAlign: "center" }}>Things I’ve built so far</p>
                 <ProjectItem />
               </motion.div>
+              <SectionScroll>
+                <section>
+                  <ParallaxText baseVelocity={-5}>
+                    Laravel PHP MySQL API{" "}
+                  </ParallaxText>
+                  <ParallaxText baseVelocity={5}>Scroll velocity</ParallaxText>
+                </section>
+              </SectionScroll>
               <div className="bottom-link">
                 <div className="navbar-right">
-                  <h2 className="logo">Humoyun</h2>
+                  <h2 className="logo">Umirov</h2>
                   <ul>
                     <li>
-                      <Link to={"tel:+998909934887"}>+998 90 993 48 87</Link>
+                      <Link to={"tel:+998909934887"}>+998 93 664 56 64</Link>
                     </li>
                     <li>{data?.email}</li>
                   </ul>
@@ -264,7 +267,8 @@ function Home() {
                   <a
                     className="icons"
                     target="_blank"
-                    href={`${data?.social?.github}`} rel="noreferrer"
+                    href={`${data?.social?.github}`}
+                    rel="noreferrer"
                   >
                     <GitHub />
                   </a>
