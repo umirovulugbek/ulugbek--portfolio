@@ -240,11 +240,6 @@ function Home() {
                 <p>Technologies I’ve been working with recently</p>
                 <StackItem />
               </div>
-              <motion.div className="section-project">
-                <h2 style={{ textAlign: "center" }}>Projects</h2>
-                <p style={{ textAlign: "center" }}>Things I’ve built so far</p>
-                <ProjectItem />
-              </motion.div>
               <SectionScroll>
                 <section>
                   <ParallaxText baseVelocity={-5}>
@@ -253,6 +248,12 @@ function Home() {
                   <ParallaxText baseVelocity={5}>Scroll velocity</ParallaxText>
                 </section>
               </SectionScroll>
+              <motion.div className="section-project">
+                <h2 style={{ textAlign: "center" }}>Projects</h2>
+                <p style={{ textAlign: "center" }}>Things I’ve built so far</p>
+                <ProjectItem />
+              </motion.div>
+             
               <div className="bottom-link">
                 <div className="navbar-right">
                   <h2 className="logo">Umirov</h2>

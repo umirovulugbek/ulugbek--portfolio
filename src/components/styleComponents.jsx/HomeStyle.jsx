@@ -196,7 +196,7 @@ export const Container = styled.div`
       text-align: center;
       font-weight: 700;
       font-size: 48px;
-      line-height: 26px;
+      line-height: 41px;
       color: #42446e;
       margin: 0;
       margin: 50px 0px;
