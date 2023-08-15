@@ -218,7 +218,7 @@ export const Container = styled.div`
       justify-items: center;
       align-items: center;
       & .hover {
-        transform: scale(1.2);
+        transform: scale(0.9);
         -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
         filter: grayscale(0%);
       }

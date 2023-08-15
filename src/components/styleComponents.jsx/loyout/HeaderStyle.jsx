@@ -23,7 +23,7 @@ export const Container = styled.div`
     }
     & .logo{
      img{
-      width: 250px;
+      width: 180px;
     }
     }
     & ul {

@@ -43,11 +43,12 @@ export const SectionScroll = styled.div`
       display: flex;
       flex-wrap: nowrap;
     }
-
+    
     .parallax span {
       display: block;
+      
       margin-right: 30px;
-      color: ${({theme}) => theme.text};
+      color: ${({theme}) => theme.plaster};
       font-family: "Plaster", sans-serif;
     }
   }

@@ -1,4 +1,3 @@
-
 import Loyout from "./loyout/Loyout";
 import StackItem from "./StackItem";
 import styled from "styled-components";
@@ -15,8 +14,14 @@ const Stack = () => {
         <StyleComponents>
           <Container>
             <div className="section-stack">
-              <h2 data-aos="fade-up">My Tech Stack</h2>
-              <p data-aos="fade-up">
+              <h2
+              // data-aos="fade-up"
+              >
+                My Tech Stack
+              </h2>
+              <p
+              // data-aos="fade-up"
+              >
                 Technologies I’ve been working with recently
               </p>
               <StackItem />

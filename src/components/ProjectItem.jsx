@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "./loyout/theme";
 import { motion } from "framer-motion";
+import Atropos from "atropos/react";
+
 const LinkLive = () => (
   <svg
     width="20"
@@ -51,6 +53,7 @@ const ProjectItem = () => {
   const { theme } = useSelector((state) => state.main);
   useEffect(() => {
     getCard();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getCard = () => {
@@ -73,30 +76,45 @@ const ProjectItem = () => {
       <motion.div className="section-project">
         <div className="cards">
           {project?.map(
-            ({ project_name, project_img, project_description, tech_stack, project_link }) => (
+            ({
+              project_name,
+              project_img,
+              project_description,
+              tech_stack,
+              project_link,
+            }) => (
               <>
-                <div className="card">
-                  <div className="card-img">
-                    <img src={project_img} alt={project_name} />
-                  </div>
-                  <div className="card-text">
-                    <h4>{project_name}</h4>
-                    <p>{project_description}</p>
-                    <span className="stack">
-                      Tech stack : <p>{tech_stack}</p>
-                    </span>
-                    <div className="links">
-                      <Link className="link" to={project_link}>
-                        <LinkLive />
-                        <span>Live Preview</span>
-                      </Link>
-                      <Link className="link">
-                        <LinkGitHub to={"/"} />
-                        <span>Live Preview</span>
-                      </Link>
+                <Atropos
+                  activeOffset={50}
+                  shadowScale={1}
+                  // style="overflow:scrolll"
+                  // onEnter={() => console.log("Enter")}
+                  // onLeave={() => console.log("Leave")}
+                  // onRotate={(x, y) => console.log("Rotate", x, y)}
+                >
+                  <div className="card" data-atropos-offset="-5">
+                    <div className="card-img">
+                      <img src={project_img} alt={project_name} />
+                    </div>
+                    <div className="card-text">
+                      <h4>{project_name}</h4>
+                      <p>{project_description}</p>
+                      <span className="stack">
+                        Tech stack : <p>{tech_stack}</p>
+                      </span>
+                      <div className="links">
+                        <Link className="link" to={project_link}>
+                          <LinkLive />
+                          <span>Live Preview</span>
+                        </Link>
+                        <Link className="link">
+                          <LinkGitHub to={"/"} />
+                          <span>Live Preview</span>
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Atropos>
               </>
             )
           )}

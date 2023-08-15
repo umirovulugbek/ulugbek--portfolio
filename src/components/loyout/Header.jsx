@@ -107,9 +107,9 @@ const Header = () => {
               <Link to={"/"}>
                 <div className="logo">
                   {localStorage.getItem("theme") === "light" ? (
-                    <img src="/img/Logo 1.png" alt="" />
+                    <img src="/img/img-logo-black.png" alt="" />
                   ) : (
-                    <img src="/img/Logo 1 (2).png" alt="" />
+                    <img src="/img/img-logo-w.png" alt="" />
                   )}
                 </div>
               </Link>

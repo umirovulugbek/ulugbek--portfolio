@@ -21,6 +21,8 @@ import AnimatedText from "../components/loyout/AnimatedText";
 
 import { wrap } from "@motionone/utils";
 import { SectionScroll } from "./styleComponents.jsx/loyout/SectionScrollStyle";
+
+
 const GitHub = () => (
   <svg
     width="30"
@@ -196,7 +198,10 @@ function Home() {
                     className="download"
                     download
                   >
-                    <div className="button" data-tooltip={`Size: ${data?.social?.file_size}Mb`}>
+                    <div
+                      className="button"
+                      data-tooltip={`Size: ${data?.social?.file_size}Mb`}
+                    >
                       <div className="button-wrapper">
                         <div className="text">Download</div>
                         <span className="icon">
@@ -223,14 +228,16 @@ function Home() {
                     </div>
                   </Link>
                 </div>
-                <motion.div
-                  initial={{ x: 200 }}
-                  animate={{ x: 0 }}
-                  transition={{ ease: "easeOut", duration: 1 }}
-                  className="home-section-img"
-                >
-                  <img src={data?.image} alt="" />
-                </motion.div>
+                {/* <Atropos activeOffset={40} shadowScale={0} className=""> */}
+                  <motion.div
+                    initial={{ x: 200 }}
+                    animate={{ x: 0 }}
+                    transition={{ ease: "easeOut", duration: 1 }}
+                    className="home-section-img"
+                  >
+                    <img src={data?.image} alt=""  data-atropos-offset="3"/>
+                  </motion.div>
+                {/* </Atropos> */}
               </div>
             </Container>
 
@@ -242,10 +249,10 @@ function Home() {
               </div>
               <SectionScroll>
                 <section>
-                  <ParallaxText baseVelocity={-5}>
-                    Laravel PHP MySQL API{" "}
+                  <ParallaxText baseVelocity={-2}>
+                    Reactjs Chakraui Redux Nextjs Javascript 
                   </ParallaxText>
-                  <ParallaxText baseVelocity={5}>Scroll velocity</ParallaxText>
+                  <ParallaxText baseVelocity={2}>Reactjs Chakraui Redux Nextjs Javascript </ParallaxText>
                 </section>
               </SectionScroll>
               <motion.div className="section-project">
@@ -253,7 +260,7 @@ function Home() {
                 <p style={{ textAlign: "center" }}>Things I’ve built so far</p>
                 <ProjectItem />
               </motion.div>
-             
+
               <div className="bottom-link">
                 <div className="navbar-right">
                   <h2 className="logo">Umirov</h2>
